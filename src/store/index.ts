@@ -6,6 +6,8 @@ export default configureStore({
             switch (action.type) {
                 case 'ADD_TODO': {
                     const newState = state;
+                    // Необходимо делать копию стейта и массива todos
+                    // const newState = {...state, todos: [...state.todos]};
                     newState.todos.push(action.payload);
                     return newState;
                 }
